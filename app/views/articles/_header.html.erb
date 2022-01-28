@@ -12,6 +12,12 @@
       <li class="nav-item">
         <%= link_to 'Sign in', new_user_session_path, class:"nav-link logo text-white"%>
       </li>
+      <li class="nav-item">
+        <%= link_to 'Edit Profile',  edit_user_registration_path, class:"nav-link logo text-white"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link logo text-white" %>
+      </li>
       <form class="form-inline">
     <input class="form-control logo mr-sm-2" type="search" placeholder="Search" aria-label="Search">
   </form>

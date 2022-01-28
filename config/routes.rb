@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get '/articles', to: 'articles#index'
+  
+  devise_scope :user do
+    get 'users/sign_out' => "devise/sessions#destroy"
+  end
 end
