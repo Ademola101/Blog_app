@@ -2,3 +2,8 @@
 <% @articles.each do |article| %>
 <p class = "container-fluid"> <%= link_to(article.title, article) %> </p>
 <% end %>
+
+<aside>
+
+<%= link_to('New Article',new_article_path)%>
+</aside>
