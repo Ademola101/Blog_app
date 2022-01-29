@@ -1,2 +1,4 @@
-<h1>Articles#index</h1>
-<p class = "container-fluid">Hello world</p>
+<h3 class = "text-start">Blog Articles</h3>
+<% @articles.each do |article| %>
+<p class = "container-fluid"> <%= article.title %> </p>
+<% end %>
