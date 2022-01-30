@@ -1,28 +1,16 @@
-<h1>Articles#index</h1>
-<p class = "container-fluid">Hello world</p>
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-
-<div class="card-group">
+<h3 class = "text-center fw-bold mt-4">Blog Articles</h3>
+<% @articles.each do |article| %>
+<div class="card-group mt-3">
   <div class="card mx-2">
-    <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title"><%= link_to(article.title, article) %></h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-primary">Read More</a>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
 
   <div class="card mx-2">
-    <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -32,7 +20,6 @@
   </div>
   
   <div class="card mx-2">
-    <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -41,15 +28,12 @@
     </div>
   </div>
 </div>
-<h3 class = "text-start">Blog Articles</h3>
-<% @articles.each do |article| %>
-<p class = "container-fluid"> <%= link_to(article.title, article) %> </p>
+<%# <p class = "container-fluid"> <%= link_to(article.title, article)</p>%>
 <% end %>
-<<<<<<< HEAD
-=======
 
-<aside>
+<%# <aside>
 
 <%= link_to('New Article',new_article_path)%>
-</aside>
->>>>>>> f03477f528cae105f99a7baca11a3e78ada806b1
+<%# </aside> %>
+
+
