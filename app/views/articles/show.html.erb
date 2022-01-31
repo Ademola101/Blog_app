@@ -7,3 +7,16 @@
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></p>
+
+
+<p> Comment Section</p>
+<% @article.comments.each do |comment| %>
+<p> Commenter:</p>
+<p>comment.commenter</p>
+<p> Comment:</p>
+<p>comment.body</p>
+<% end %>
+
+
+<p> Add a comment</p>
+<%= render 'comments/form' %>
