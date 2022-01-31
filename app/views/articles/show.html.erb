@@ -3,18 +3,15 @@
 <p> <%= @article.body %> </p>
 
 <p><%= link_to('Edit Article', edit_article_path(@article))%>  </p>
-<p><%= link_to "Delete Article", article_path(@article), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></p>
+<p><%= link_to 'Delete', article_path(@article), method: :delete %></p>
 
 
 <p> Comment Section</p>
 <% @article.comments.each do |comment| %>
-<p> Commenter:</p>
-<p>comment.commenter</p>
+<p> Name:</p>
+<p> <%= comment.commenter %> </p>
 <p> Comment:</p>
-<p>comment.body</p>
+<p> <%= comment.body %> </p>
 <% end %>
 
 
