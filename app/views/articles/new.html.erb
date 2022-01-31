@@ -1,24 +1,24 @@
-<h1>New Article</h1>
+<h1 class= "mt-5 fw-bold">New Article</h1>
 
 <%= form_with model: @article do |form| %>
-  <div>
+  <div class= "form-group mt-4">
     <%= form.label :title %><br>
-   <%= form.text_field :title %>
+   <%= form.text_field :title, class: "form-control" %>
       <% @article.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
-  <div>
+  <div class= "form-group mt-4">
     <%= form.label :body %><br>
-    <%= form.text_area :body %> 
+    <%= form.text_area :body, class: "form-control" %> 
         <% @article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
  
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="actions mt-3">
+    <%= form.submit "Create Article", class: "btn btn-danger" %>
   </div>
 <% end %>

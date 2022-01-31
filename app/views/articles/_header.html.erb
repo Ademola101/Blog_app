@@ -10,21 +10,24 @@
   
       <% if user_signed_in? %>
       <li class="nav-item">
+        <%= link_to 'Write an Article',  new_article_path, class:"nav-link logo text-white"%>
+      </li>
+      <li class="nav-item">
         <%= link_to 'Edit Profile',  edit_user_registration_path, class:"nav-link logo text-white"%>
       </li>
       <li class="nav-item">
         <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link logo text-white" %>
       </li>
       <% else %>
+      <li class="nav-item">
+        <%= link_to 'Write an Article',  new_article_path, class:"nav-link logo text-white"%>
+      </li>
+      <li>
           <%= link_to 'Sign up', new_user_registration_path, class:"nav-link logo text-white"%>
       </li>
       <li class="nav-item">
         <%= link_to 'Sign in', new_user_session_path, class:"nav-link logo text-white"%>
       </li>
       <% end %>
-      <%# <form class="form-inline">
-    <input class="form-control logo mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  </form>
-  <button type="button" class="btn ms-1 logo mb-1 btn-danger">Search</button> %>
   </div>
 </nav>
