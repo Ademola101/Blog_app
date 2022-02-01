@@ -2,8 +2,10 @@
 <h1 class="m-2 yy"> <%= @article.title %></h1>
 <p class="m-4"> <%= @article.body %> </p>
 
-<p><%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-secondary"%> 
-<%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-dark" %></p>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary"> <%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-secondary"%> </button>
+  <button type="button" class="btn btn-dark">  <%= button_to 'Delete', article_path(@article), method: :delete, class: "btn btn-dark" %> </button>
+</div>
 
 <hr/>
 <figure class=" shadow p-5" style="background: #8b828211;">
