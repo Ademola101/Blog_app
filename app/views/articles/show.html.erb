@@ -3,8 +3,8 @@
 <p class="m-4"> <%= @article.body %> </p>
 
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary"> <%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-secondary"%> </button>
-  <button type="button" class="btn btn-dark">  <%= button_to 'Delete', article_path(@article), method: :delete, class: "btn btn-dark" %> </button>
+  <button type="button" class="btn btn-info"> <%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-info"%> </button>
+  <button type="button" class="btn btn-danger">  <%= button_to 'Delete', article_path(@article), method: :delete, class: "btn btn-danger" %> </button>
 </div>
 
 <hr/>
@@ -13,10 +13,12 @@
   <% @article.comments.each do |comment| %>
   <blockquote class="blockquote">
     <p><%= comment.body %>.</p>
+     <%= button_to "Delete Comment", [comment.article, comment], method: :delete, class: "btn link-info float-end"  %>
   </blockquote>
   <figcaption class="blockquote-footer mx-3">
-   <cite title="Source Title"> <%= comment.commenter %> </cite>
-     <%= button_to "Destroy Comment", [comment.article, comment], method: :delete, class: "btn btn-dark"  %>
+   <cite title="Source Title">
+    <%= comment.commenter %></cite>
+    
 
   </figcaption>
   <p><hr/></p>
