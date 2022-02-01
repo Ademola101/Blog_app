@@ -16,9 +16,12 @@
   </blockquote>
   <figcaption class="blockquote-footer mx-3">
    <cite title="Source Title"> <%= comment.commenter %> </cite>
+     <%= button_to "Destroy Comment", [comment.article, comment], method: :delete, class: "btn btn-dark"  %>
+
   </figcaption>
   <p><hr/></p>
   <% end %>
+  
   <%= render 'comments/form' %>
 </figure>
 
