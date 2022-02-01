@@ -1,19 +1,22 @@
 
-<h1> <%= @article.title %></h1>
-<p> <%= @article.body %> </p>
+<h1 class="m-2 yy"> <%= @article.title %></h1>
+<p class="m-4"> <%= @article.body %> </p>
 
-<p><%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-danger"%>  </p>
-<p><%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-danger" %></p>
+<p><%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-secondary"%> 
+<%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-dark" %></p>
 
+<hr/>
+<figure class=" shadow p-5" style="background: #8b828211;">
+<p class="fs-2"> Comments </p>
+  <% @article.comments.each do |comment| %>
+  <blockquote class="blockquote">
+    <p><%= comment.body %>.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer mx-3">
+   <cite title="Source Title"> <%= comment.commenter %> </cite>
+  </figcaption>
+  <p><hr/></p>
+  <% end %>
+  <%= render 'comments/form' %>
+</figure>
 
-<p> Comment Section</p>
-<% @article.comments.each do |comment| %>
-<p> Name:</p>
-<p> <%= comment.commenter %> </p>
-<p> Comment:</p>
-<p> <%= comment.body %> </p>
-<% end %>
-
-
-<p> Add a comment</p>
-<%= render 'comments/form' %>
