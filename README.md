@@ -1,24 +1,31 @@
-# README
+# Blog-App
+First project built using Ruby On Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Built With
+* Ruby
+* Rails
 
-Things you may want to cover:
+## Author
+👤 Ademola Ogunmokun
 
-* Ruby version
+* GitHub: @Ademola101
+* Twitter: @ademola_isr
+* LinkedIn: Ademola Ogunmokun
 
-* System dependencies
+👤 Shadrach Akaade
 
-* Configuration
+* GitHub: @shadrxcc
+* Twitter: @shadrxcc
+* LinkedIn: Shadrach Akaade
 
-* Database creation
+👤 Ayeni Olayinka
 
-* Database initialization
+* GitHub: @YinkTech
+* Twitter: @YinkTech
+* LinkedIn: Ayeni Olayinka
 
-* How to run the test suite
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Show your support
+Give a ⭐️ if you like this project!

@@ -4,8 +4,6 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
-    @user  = User.all
-    
   end
 
   def show
@@ -17,7 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = current_user.articles.new(article_params)
+    @article = Article.new(article_params)
     if @article.save
       redirect_to @article
     else render :new, status: :unprocessable_entity
