@@ -3,14 +3,11 @@
 <p class="m-4"> <%= @article.body %> </p>
 
 <% if user_signed_in? %>
-   <p><%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-danger"%>  </p>
-   <p><%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-danger" %></p>
-<% end %>
-
-<div class="btn-group" role="group" aria-label="Basic example">
+   <div class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary"> <%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-secondary"%> </button>
-  <button type="button" class="btn btn-dark">  <%= button_to 'Delete', article_path(@article), method: :delete, class: "btn btn-dark" %> </button>
+  <button type="button" class="btn btn-danger">  <%= button_to 'Delete', article_path(@article), method: :delete, class: "btn btn-dark" %> </button>
 </div>
+<% end %>
 
 <hr/>
 <figure class=" shadow p-5" style="background: #8b828211;">
