@@ -1,9 +1,10 @@
 
 <h1> <%= @article.title %></h1>
 <p> <%= @article.body %> </p>
+
 <% if user_signed_in? %>
-<p><%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-danger"%>  </p>
-<p><%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-danger" %></p>
+   <p><%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-danger"%>  </p>
+   <p><%= link_to 'Delete', article_path(@article), method: :delete, class: "btn btn-danger" %></p>
 <% end %>
 
 
