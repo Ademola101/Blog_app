@@ -12,10 +12,10 @@
 <p class="fs-2"> Comments </p>
   <% @article.comments.each do |comment| %>
   <blockquote class="blockquote">
-    <p><%= comment.body %>.</p>
+    <p><%= comment.body %> </p>
   </blockquote>
   <figcaption class="blockquote-footer mx-3">
-   <cite title="Source Title"> <%= comment.commenter %> </cite>
+   <cite title="Source Title"> By <%= comment.commenter %> </cite>
      <%= button_to "Destroy Comment", [comment.article, comment], method: :delete, class: "btn btn-dark"  %>
 
   </figcaption>
