@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "articles#index"
-  get "articles/about"
+  root 'articles#index'
+  get 'articles/about'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
-  
+
   devise_scope :user do
-    get 'users/sign_out' => "devise/sessions#destroy"
+    get 'users/sign_out' => 'devise/sessions#destroy'
   end
 end

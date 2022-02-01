@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
-  
-  before_action :authenticate_user!, except: [ :index, :show]
-  
+  before_action :authenticate_user!, except: %i[index show]
+
   def index
     @articles = Article.all
   end
@@ -18,12 +17,12 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       redirect_to @article
-    else render :new, status: :unprocessable_entity
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 
-  def about
-  end
+  def about; end
 
   def edit
     @article = Article.find(params[:id])
@@ -50,5 +49,4 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit('title', 'body')
   end
-
 end
