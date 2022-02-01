@@ -1,32 +1,18 @@
-<h3 class = "text-center fw-bold mt-4">Blog Articles</h3>
+<h3 class = "text-center fw-bold mt-4 font-monospace">Latest Articles</h3>
 <% @articles.each do |article| %>
-<div class="card-group mt-3">
+<div class="card-group my-3">
   <div class="card mx-2">
     <div class="card-body">
-      <h5 class="card-title"><%= link_to(article.title, article) %></h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <%= link_to('Read More', article, class: 'btn btn-danger')  %>
+      <h1 class="card-title text-capitalize "><%= link_to(article.title, article, class:"text-decoration-none") %></h1> 
+      <small class="d-block mx-2">
+       <%= link_to(article.body, article, class:"text-decoration-none text-dark font-monospace") %> 
+       <%= link_to('Read More', article, class: 'link-info text-break')  %>
+      </small>
       <p class="card-text"><small class="text-muted"> Created at <%= article.created_at%> </small></p>
     </div>
   </div>
-
-  <div class="card mx-2">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-danger">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
   
-  <div class="card mx-2">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-danger">Go somewhere</a>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+
 </div>
 <%# <p class = "container-fluid"> <%= link_to(article.title, article)</p>%>
 <% end %>
