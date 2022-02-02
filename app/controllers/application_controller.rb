@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-   
+
   before_action :set_theme
 
   def set_theme
