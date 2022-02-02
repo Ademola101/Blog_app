@@ -1,9 +1,9 @@
-<h3 class = "text-center fw-bold mt-4 font-monospace">Latest Articles</h3>
+<h2 class = "text-center fw-bold mt-4 font-monospace">Latest Articles</h2>
 <% @articles.each do |article| %>
 <div class="card-group my-3">
   <div class="card mx-2">
     <div class="card-body">
-      <h1 class="card-title text-capitalize "><%= link_to(article.title, article, class:"text-decoration-none") %></h1> 
+      <h2 class="card-title text-capitalize "><%= link_to(article.title, article, class:"text-decoration-none", style: "color: #27c5ca;") %></h2> 
       <small class="d-block mx-2">
        <%= link_to(article.body, article, class:"text-decoration-none text-dark font-monospace") %> 
        <%= link_to('Read More', article, class: 'link-info text-break')  %>
