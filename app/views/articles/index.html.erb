@@ -1,17 +1,18 @@
 <h2 class = "text-center fw-bold mt-4 font-monospace">Latest Articles</h2>
 <% @articles.each do |article| %>
-<div class="card-group my-3">
-  <div class="card mx-2">
-    <div class="card-body">
-      <h2 class="card-title text-capitalize "><%= link_to(article.title, article, class:"text-decoration-none", style: "color: #27c5ca;") %></h2> 
-      <small class="d-block mx-2">
-       <%= link_to(article.body, article, class:"text-decoration-none text-dark font-monospace") %> 
-       <%= link_to('Read More', article, class: 'link-info text-break')  %>
+
+<div class=" mx-auto">
+  <div class="jumbotron jumbotron-fluid border m-2 p-2">
+    <div class="container">
+    <h2 class="display-4 text-capitalize "><%= link_to(article.title, article, class:"text-decoration-none text-inherit", style: "color: #27c5ca;") %></h2>
+      <small class="d-block mx-2 lead">
+        <%= article.body %> 
+        <%= link_to('Read More', article, class: 'link-info text-break')  %>
       </small>
-      <p class="card-text"><small class="text-muted"> Created at <%= article.created_at%> </small></p>
+      <p class=" mx-2"><small > Created at <%= article.created_at %> </small></p>
     </div>
   </div>
-  
 
+ 
 </div>
 <% end %>
