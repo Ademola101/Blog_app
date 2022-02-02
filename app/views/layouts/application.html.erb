@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="<%= cookies[:theme] %>">
     
     <%= render 'articles/header' %>
     <div class = "container logo">
@@ -21,8 +21,13 @@
    <% if notice %><div class = 'alert alert-info'> <%= notice %> </div> <% end %>
     
     <% if alert %> <div class = 'alert alert-warning'> <%= alert %> </div> <% end %>
-
-
+  <abbr title="Change theme">
+  <% if cookies[:theme] == "light" %>
+    <%= link_to "", root_path(theme: "dark"), class: " fs-3 text-dark bi bi-lamp-fill" %>
+  <% else %>
+    <%= link_to "", root_path(theme: "light"), class: "fs-3 text-light bi bi-lamp" %>
+  <% end %>
+  </abbr>
     
       <%= yield %>
     <div>
