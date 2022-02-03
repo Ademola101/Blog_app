@@ -21,6 +21,10 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm Password" %>
   </div>
 
+<div class="field mt-2 mb-3 form-group">
+<%=f.label :name %> <br>
+<%= f.text_field :name, autofocus: true, class:"form-control" %>
+</div>
   <div class="actions">
     <%= f.submit "Sign up", class: "btn btn-danger" %>
   </div>
