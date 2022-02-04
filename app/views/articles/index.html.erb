@@ -4,12 +4,14 @@
 <div class=" mx-auto">
   <div class="jumbotron jumbotron-fluid border m-2 p-2">
     <div class="container">
-    <h2 class="display-4 text-capitalize "><%= link_to(article.title, article, class:"text-decoration-none text-inherit", style: "color: #27c5ca;") %></h2>
+    <h2 class="display-4 text-capitalize "><%= link_to(article.title, article, 
+    class:"text-decoration-none text-inherit", style: "color: #27c5ca;") %></h2>
       <small class="d-block mx-2 lead">
         <%= article.body %> 
         <%= link_to('Read More', article, class: 'link-info text-break')  %>
       </small>
       <p class=" mx-2"><small > Created at <%= article.created_at %> </small></p>
+      <p class=" mx-2"><small > Created by <%=article.user.name %> </small></p>
     </div>
   </div>
 
