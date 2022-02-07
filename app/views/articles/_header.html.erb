@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-danger ps-5  " style="background: #8332a8; font-sans-serif">
+<nav class="navbar navbar-expand-lg navbar-danger ps-5  " style="background: #ce1e1e; font-sans-serif">
   <%= link_to 'Agbablogrs', root_path, class:"navbar-brand fw-bold fs-4 logo text-white fw-bold"%>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,38 +9,24 @@
       <li class="nav-item active">
   
       <% if user_signed_in? %>
-      <li class="nav-item"> 
-      <abbr title="Write an Article ">
-        <%= link_to '  ', new_article_path, class:"nav-link text-white fs-3 bi bi-plus-square "%>
-        </abbr>
+      <li class="nav-item">
+        <%= link_to 'Write an Article  |',  new_article_path, class:"nav-link logo text-white"%>
       </li>
       <li class="nav-item">
-      <abbr title="Edit Profile ">
-        <%= link_to '  ',  edit_user_registration_path, class:"nav-link  text-white fs-3 bi bi-pencil-square "%> 
-        </abbr>
+        <%= link_to 'Edit Profile |',  edit_user_registration_path, class:"nav-link logo text-white"%> 
       </li>
       <li class="nav-item">
-      <abbr title="Sign out ">
-
-    <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: "false" },class:"nav-link text-white fs-3 bi bi-box-arrow-right" %>
-
-        </abbr>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link logo text-white" %>
       </li>
       <% else %>
-      <li class="nav-item"> 
-        <abbr title="Write an Article ">
-          <%= link_to '  ', new_article_path, class:"nav-link text-white fs-3 bi bi-plus-square-fill "%>
-        </abbr>
+      <li class="nav-item">
+        <%= link_to 'Write an Article',  new_article_path, class:"nav-link logo text-white"%>
       </li>
       <li>
-          <abbr title="Sign up ">
-         <%= link_to '  ', new_user_registration_path, class:"nav-link text-white fs-3 bi bi-question-square-fill "%>
-          </abbr>
+          <%= link_to 'Sign up', new_user_registration_path, class:"nav-link logo text-white"%>
       </li>
       <li class="nav-item">
-       <abbr title="Sign in ">
-           <%= link_to '  ', new_user_session_path, class:"nav-link text-white fs-3 bi bi-box-arrow-in-left "%>
-        </abbr>
+        <%= link_to 'Sign in', new_user_session_path, class:"nav-link logo text-white"%>
       </li>
       <% end %>
   </div>
