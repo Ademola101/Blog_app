@@ -5,7 +5,8 @@
 <% if current_user == @article.user and user_signed_in?%>
 <div class="btn-group" role="group" aria-label="Basic example">
   <button type="button" class="btn btn-secondary"> <%= link_to 'Edit Article', edit_article_path(@article), class: "btn btn-secondary"%> </button>
-  <a  class="btn btn-danger"> <%= button_to 'Delete', article_path(@article), method: :delete, class: "btn btn-danger" %> </a>
+  <a  class="btn btn-danger"> <%= link_to 'Delete', article_path(@article), 
+  data:{ turbo_method: :delete, turbo_confirm: 'Are you sure'}, class: "btn btn-danger" %> </a>
     
 </div>
 <% end %>
