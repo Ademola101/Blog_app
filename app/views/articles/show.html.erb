@@ -18,7 +18,8 @@
   <% @article.comments.each do |comment| %>
   <blockquote class="blockquote">
     <p><%= comment.body %>.</p>
-     <%= button_to "Delete Comment", [comment.article, comment], method: :delete, class: "btn link-info float-end"  %>
+     <%= link_to "Delete Comment", [comment.article, comment], data:
+     { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete the comment'}, class: "btn link-info float-end"  %>
   </blockquote>
   <figcaption class="blockquote-footer mx-3">
    <cite title="Source Title">
