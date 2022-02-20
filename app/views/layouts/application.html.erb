@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
    
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "main", "data-turbo-track": "reload" %>
    
     <%= javascript_include_tag "application-esbuild", "data-turbo-track": "reload", defer: true %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +33,11 @@
   </abbr>
     
       <%= yield %>
-    <div>
+    </div>
+
+    <footer class = " hello bg-dark">
+    <a href="#" class="text-decoration-none link-light mx-2"> <i class="fab fa-facebook-square"></i>
+    
+    </footer>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <h2 class = "text-center fw-bold mt-4 font-monospace">Latest Articles</h2>
 <% @articles.each do |article| %>
-
+<% unless article.archived? %>
 <div class=" mx-auto">
   <div class="jumbotron jumbotron-fluid border m-2 p-2">
     <div class="container">
@@ -17,4 +17,5 @@
 
  
 </div>
+<% end %>
 <% end %>

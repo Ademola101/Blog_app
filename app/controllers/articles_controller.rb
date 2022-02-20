@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
 
   def index
-    @articles = Article.all.includes(:user).order(created_at: :desc)
+    @articles = Article.includes(:user).order(created_at: :desc)
   end
 
   def show
@@ -46,6 +46,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit('title', 'body')
+    params.require(:article).permit('title', 'body', 'status')
   end
 end

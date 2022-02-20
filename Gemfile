@@ -6,6 +6,16 @@ ruby '3.0.1'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.1'
 
+# from here
+gem 'activeadmin', github: 'tagliala/activeadmin', branch: 'feature/railties-7' # FIXME: revert to stable
+
+gem 'arbre', github: 'activeadmin/arbre' # FIXME: remove
+gem 'inherited_resources', github: 'activeadmin/inherited_resources' # FIXME: remove
+# end here
+
+gem 'bcrypt', platforms: :ruby
+
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
@@ -78,3 +88,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem "redcarpet", "~> 3.5"
