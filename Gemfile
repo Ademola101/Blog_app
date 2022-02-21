@@ -7,10 +7,10 @@ ruby '3.0.1'
 gem 'rails', '~> 7.0.1'
 
 # from here
-gem 'activeadmin', github: 'tagliala/activeadmin', branch: 'feature/railties-7' # FIXME: revert to stable
+#gem 'activeadmin', github: 'tagliala/activeadmin', branch: 'feature/railties-7' # FIXME: revert to stable
 
-gem 'arbre', github: 'activeadmin/arbre' # FIXME: remove
-gem 'inherited_resources', github: 'activeadmin/inherited_resources' # FIXME: remove
+#gem 'arbre', github: 'activeadmin/arbre' # FIXME: remove
+#gem 'inherited_resources', github: 'activeadmin/inherited_resources' # FIXME: remove
 # end here
 
 gem 'bcrypt', platforms: :ruby
