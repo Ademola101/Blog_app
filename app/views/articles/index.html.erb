@@ -1,0 +1,21 @@
+<h2 class = "text-center fw-bold mt-4 font-monospace">Latest Articles</h2>
+<% @articles.each do |article| %>
+<% unless article.archived? %>
+<div class=" mx-auto">
+  <div class="jumbotron jumbotron-fluid border m-2 p-2">
+    <div class="container">
+    <h2 class=" text-capitalize "><%= link_to(article.title, article, 
+    class:"text-decoration-none text-inherit", style: "color: #27c5ca;") %></h2>
+      <small class="d-block mx-2 lead">
+        <%= article.body %> 
+        <%= link_to('Read More', article, class: 'link-info text-break')  %>
+      </small>
+      <p class=" mx-2"><small > Created at <%= article.created_at %> </small></p>
+      <p class=" mx-2"><small > Created by <%=article.user.name %> </small></p>
+    </div>
+  </div>
+
+ 
+</div>
+<% end %>
+<% end %>
